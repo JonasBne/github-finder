@@ -1,0 +1,30 @@
+{
+  "name": "github-finder",
+  "version": "1.0.0",
+  "description": "An easy http library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development",
+    "start": "webpack serve --mode development"
+  },
+  "author": "Jonas Boone",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "bootswatch": "^5.0.2",
+    "sass": "^1.35.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^1.6.1",
+    "popper.js": "^1.16.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
