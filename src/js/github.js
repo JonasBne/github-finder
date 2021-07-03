@@ -1,4 +1,4 @@
-// Create class
+// Create Github class
 export default class Github {
     constructor() {
         // Github Oath

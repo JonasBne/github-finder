@@ -1,20 +1,22 @@
 // Import Bootstrap & Bootswatch
 import "bootstrap";
-import "bootswatch/dist/litera/bootstrap.min.css";
+import "bootswatch/dist/flatly/bootstrap.css";
 
 // Import custom css
 import "./css/custom.scss";
 
 // Import class(es) & initialize
 import Github from "./js/github";
-
 const github = new Github;
+
+import Ui from "./js/ui";
+const ui = new Ui();
 
 // Search input
 const searchUser = document.getElementById("search-user");
 
 // Event listener search input
-searchUser.addEventListener("keydown", () => {
+searchUser.addEventListener("input", () => {
     // Get input text
     const userText = searchUser.value;
 
@@ -29,6 +31,7 @@ searchUser.addEventListener("keydown", () => {
                     alert("User does not exist");
                 } else {
                     // Show profile
+                    ui.showUserProfile(data.profile);
                 }
             });
     } else {
