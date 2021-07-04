@@ -6,13 +6,9 @@ export default class Github {
         this.client_secret = "a2c9dc646c5681beb93c667af4aac92c274221a8";
     }
 
-    // Add method for a GET request
+    // GET request for users
     async fetchUserProfile(user) {
         const profileResponse = await fetch(`https://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`);
-        const profileData = await profileResponse.json();
-        return {
-            profile: profileData
-        }
+        return await profileResponse.json();
     }
-
 }

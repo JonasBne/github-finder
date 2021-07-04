@@ -26,12 +26,12 @@ searchUser.addEventListener("input", () => {
         github.fetchUserProfile(userText)
             .then(data => {
                 // Check if there is a 404 error
-                if (data.profile.message === "Not Found") {
+                if (data.message === "Not Found") {
                     // Show alert
                     ui.showAlert(`User ${userText} not found`, "alert alert-danger");
                 } else {
                     // Show profile
-                    ui.showUserProfile(data.profile);
+                    ui.showUserProfile(data);
                     // Clear alert message in case user profile is found
                     ui.clearAlert();
                 }
