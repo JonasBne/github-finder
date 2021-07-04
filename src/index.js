@@ -36,6 +36,7 @@ searchUser.addEventListener("input", () => {
             });
     } else {
         // Clear profile
+        ui.clearUserProfile();
     }
 
 })
