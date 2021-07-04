@@ -28,7 +28,7 @@ searchUser.addEventListener("input", () => {
                 // Check if there is a 404 error
                 if (data.profile.message === "Not Found") {
                     // Show alert
-                    alert("User does not exist");
+                    ui.showAlert(`User ${userText} not found`, "alert alert-danger");
                 } else {
                     // Show profile
                     ui.showUserProfile(data.profile);

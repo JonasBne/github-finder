@@ -33,6 +33,37 @@ export default class Ui {
     `;
     }
 
+    // Show alert
+    showAlert(msg, className) {
+        // Clear any remaining alerts
+        this.clearAlert();
+        // Create div & add class
+        const div = document.createElement("div");
+        div.className = className;
+
+        // Add text node & pass in the message
+        div.appendChild(document.createTextNode(msg));
+
+        // Get parent
+        const container = document.querySelector(".searchContainer");
+
+        // Get search box
+        const search = document.querySelector(".search");
+
+        // Insert alert
+        container.insertBefore(div, search);
+    }
+
+    // Clear alert message
+    clearAlert() {
+        const currentAlert = document.querySelector(".alert");
+
+        // If there is an alert, first clear it
+        if (currentAlert) {
+            currentAlert.remove();
+        }
+    }
+
     // Clear profile
     clearUserProfile() {
         this.profile.innerHTML = "";
