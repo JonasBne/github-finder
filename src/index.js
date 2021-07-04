@@ -32,6 +32,8 @@ searchUser.addEventListener("input", () => {
                 } else {
                     // Show profile
                     ui.showUserProfile(data.profile);
+                    // Clear alert message in case user profile is found
+                    ui.clearAlert();
                 }
             });
     } else {
